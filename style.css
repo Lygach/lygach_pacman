@@ -1,0 +1,367 @@
+/* Reset and Base Styles */
+@font-face {
+  font-family: 'Press Start';
+  src: url('img/prstartk.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #FFF;
+  font-family: 'Press Start';
+  padding: 0;
+  padding-top: 20px;
+  overflow-x: hidden;
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 100px;
+  font-size: 24px;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s ease;
+}
+header nav a:hover {
+  color: #F9ED3F;
+  text-shadow: 0 0 10px #F9ED3F;
+}
+
+.home p {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 35vh;
+  animation: blink 2s infinite;
+  margin-bottom: 35vh;
+}
+
+
+.home::after, .high_scores::after, .how_to_play::after {
+  content: "";
+  display: block;
+  border-bottom: 3px dotted #F9ED3F; 
+  width: 100%;
+  margin-top: 11%;
+}
+
+
+.logo {
+  width: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+}
+
+
+.pacman {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background-image: url('img/Pacman.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 55%;
+  left: 35%;
+  animation: pacman 10s linear infinite;
+}
+
+.ghost {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: 55%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: ghosts 10s linear infinite ;
+}
+
+.ghost.pinky {
+  background-image: url('img/Pinky.png');
+  left: 46%;
+}
+
+.ghost.inky {
+  background-image: url('img/Inky.png');
+  left: 54%;
+}
+
+.ghost.blinky {
+  background-image: url('img/Blinky.png');
+
+  left: 62%;
+
+}
+
+.ghost.clyde {
+  background-image: url('img/Clyde.png');
+  left: 70%;
+}
+
+
+
+
+.high_scores h2 {
+  color: #F9ED3F;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 6%;
+}
+
+.high_scores h3 {
+  text-align: center;
+  font-size: 34px;
+  margin-top: 3%;
+}
+
+.rankings {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.rankings p {
+  font-size: 30px;
+  margin-top: 50px;
+}
+.rankings ul {
+  list-style: none;
+  margin-top: 2%;
+  font-size: 28px;
+  margin-top: 55px;
+}
+.rankings ul li {
+  margin-top: 10px;
+}
+
+.rankings ul li:nth-child(1), li:nth-child(5), li:nth-child(9)  {
+  color: #FFA002;
+}
+.rankings ul li:nth-child(2), li:nth-child(6), li:nth-child(10)  {
+  color: #FF0401;
+}
+.rankings ul li:nth-child(3), li:nth-child(7)  {
+  color: #01F8F8;
+}
+.rankings ul li:nth-child(4), li:nth-child(8)  {
+  color: #FF60B0;
+}
+
+
+
+
+.how_to_play h2 {
+  text-align: center;
+  font-size: 36px;
+}
+
+.how_to_play p {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 3%;
+  line-height: 1.2;
+}
+.how_to_play p span {
+  color: #FFD300;
+}
+
+.pacman_2 {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  background-image: url('img/Pacman.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 150px;
+  left: 35%;
+  animation: pacman_2 10s linear infinite;
+}
+
+.ghost_2 {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('img/Eaten.png');
+  animation: ghosts_2 10s linear infinite ;
+}
+
+.ghost1  { 
+  top: 75px;
+  left: 46%;
+}
+
+.ghost2  {
+  left: 54%;
+}
+
+.ghost3  {
+  left: 62%;
+  bottom: 75px;
+}
+
+.ghost4  {
+  left: 70%;
+  bottom: 150px;
+}
+
+
+
+
+.players {
+  padding-top: 10%;
+  padding-bottom: 15%;
+}
+
+.players p {
+  font-size: 30px;
+  text-align: center;
+  margin: 35px auto;
+}
+
+.card {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+}
+
+.card img {
+  height: 75px;
+  transform: scaleX(-1);
+
+}
+
+.pts { 
+  padding-top: 6%;
+  display: flex;
+  width: 45%;
+  margin: 0 auto;
+}
+.pts p {
+  display: block;
+}
+
+.eaten{
+  height: 75px;
+  margin: 0 10px;
+}
+
+.point1 {
+  height: 50px;
+  margin-right: 17%;
+  margin-top: 4%;
+}
+
+.point2 {
+  height: 20px;
+  margin-right: 20%;
+  margin-top: 7%;
+}
+
+
+
+footer p {
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+
+
+
+@keyframes pacman {
+  0% {
+    transform: scaleX(-1);
+  }
+  23% {
+    transform: translate(-73vw) scaleX(-1);
+  }
+  23.1% {
+    transform: translate(-73vw) scaleX(1);
+  }
+  
+  75% {
+    transform: translate(70vw);
+  } 
+  75.1% {
+    transform: translate(70vw) scaleX(-1);
+  } 
+  99.9999% {
+    transform: scaleX(-1);
+  }
+}
+
+@keyframes ghosts {
+
+
+  23% {
+    transform: translate(-73vw);
+  }
+  23.1% {
+    transform: translate(-73vw) scaleX(-1);
+  }
+  
+  75% {
+    transform: translate(70vw) scaleX(-1);
+  } 
+  75.1% {
+    transform: translate(70vw) scaleX(1);
+  } 
+  99.9999% {
+    transform: scaleX(1);
+  }
+  
+}
+
+
+@keyframes pacman_2 {
+
+  23% {
+    transform: translate(70vw);
+  }
+  23.1% {
+    transform: translate(70vw) scaleX(-1);
+  }
+  
+  75% {
+    transform: translate(-73vw) scaleX(-1);
+  } 
+  75.1% {
+    transform: translate(-73vw) scaleX(1);
+  } 
+
+}
+
+@keyframes ghosts_2 {
+
+
+  23% {
+    transform: translate(70vw);
+  }
+
+  75% {
+    transform: translate(-73vw);
+  } 
+
+}
+
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+    visibility: visible;
+  }
+  50.01%, 100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
